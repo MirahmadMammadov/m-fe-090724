@@ -61,6 +61,8 @@ main {
   align-self: flex-end;
 	background: red;
 	clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+  animation: pulse 1s infinite;
+
 }
 
 .complexAnimationContainer {
@@ -75,6 +77,11 @@ main {
   background-color: greenyellow;
   padding: 15px;
   border-radius: 10px;
+  animation: moveAndRotate 3s infinite;
+}
+.complexAnimatedBlock:hover {
+  animation-play-state: paused;
+  background-color: #00bfff;
 }
 
 .sliderContainer {
@@ -111,3 +118,58 @@ main {
 .slide4 {
   background-color: lightseagreen;
 }
+
+.simpleBlock {
+  transition: transform 0.3s ease;
+}
+
+.block1:hover {
+  transform: scale(1.2);
+}
+
+.block2:hover {
+  transform: rotate(45deg);
+}
+.block3:hover {
+  transform: translate(-20px, 20px); 
+}
+
+.block4:hover {
+  opacity: 0;
+}
+.simpleAnimationContainer:hover .simpleBlock {
+  transform: scale(0.9);
+}
+.simpleAnimationContainer:hover .modalWindow {
+  top: 0;
+  opacity: 1;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1; 
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes moveAndRotate {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(300px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+

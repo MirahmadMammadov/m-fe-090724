@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0096CD;
+  text-align: center;
+}
+
+ul {
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+.intro_block ul {
+  background-color: lightgreen;
+}
+
+.simple_container_block {
+  background-color: lightsalmon;
+}
+
+.intro_block .simple_container_block {
+  background-color: lightseagreen;
+}
+
+.simple_container_block {
+  background-color: lightsalmon;
+}
+.simple_container_block.attention_block {
+  background-color: #e24f4f;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}/*# sourceMappingURL=base.css.map */
